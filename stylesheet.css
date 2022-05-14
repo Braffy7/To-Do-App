@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+body {
+    background: url("./background.jpg");
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+.container {
+    position: absolute;
+    right: 10vw;
+    top: 15vh;
+    width: 40vw;
+    background: linear-gradient(#e66465, #9198e5);
+    border-radius: 10%;
+    padding: 2vw;
+    min-height: 70vh;
+    border: 3px solid black;
+}
+.container_title {
+    text-align: center;
+    font-size: 4vw;
+    margin: 0;
+}
+.container_add {
+    position: relative;
+    margin: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vw;
+}
+form input, form button {
+    font-size: 2vw;
+    border: none;
+    background: white;
+    border-radius: 0%;
+    box-sizing: border-box;
+    padding: 0.5vw;
+    height: 3vw;
+}
+.container_add_btn {
+    background-image: url(plus-sign.png);
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: bisque;
+    height: 3vw;
+    width: 3vw;
+    cursor: pointer;
+}
+.container_add_btn:hover {
+    transition: 0.5s;
+    background-color: rgb(253, 217, 174);
+    background-size: 1.8vw;
+}
+#container_list {
+    font-size: 2vw;
+    padding: 5px;
+    display: grid;
+    justify-content: center;
+}
+.container_list_point {
+    display: flex;
+    align-items: center;
+    margin: 1vh;
+    width: 35vw;
+    background: white;
+}
+.container_list_point_text {
+    flex: 1;
+    padding-left: 0.5vw;
+}
+.container_list_point_btn-completed {
+    background-image: url(approved.png);
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 3vw;
+    width: 3vw;
+    border: none;
+    background-color: rgb(102, 250, 73);
+    cursor: pointer;
+}
+.container_list_point_btn-trash {
+    background-image: url(cross.png);
+    background-size: 1.5vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 3vw;
+    width: 3vw;
+    border: none;
+    background-color: rgb(255, 71, 65);
+    cursor: pointer;
+}
+.completed {
+    background-color: rgb(209, 201, 201);
+    text-decoration: line-through;
+    transition: all 0.5s ease;
+}
+.fall {
+    transform: translateY(8vh) rotateZ(20deg);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0%;
+        border: none;
+    }
+    .container_title {
+        font-size: 12vw;
+        margin: 0;
+    }
+    .container_add {
+        margin: 2vh;
+        height: 4vw;
+    }
+    form input, form button {
+        font-size: 4vw;
+        padding: 1vw;
+        height: 6vw;
+    }
+    .container_add_btn {
+        background-size: 4vw;
+        height: 6vw;
+        width: 6vw;
+    }
+    .container_add_btn:hover {
+        background-size: 4vw;
+    }
+    #container_list {
+        font-size: 4vw;
+    }
+    .container_list_point {
+        width: 55vw;
+    }
+    .container_list_point_text {
+        padding-left: 1.5vw;
+    }
+    .container_list_point_btn-completed {
+        background-size: 4vw;
+        height: 6vw;
+        width: 6vw;
+    }
+    .container_list_point_btn-trash {
+        background-size: 3.5vw;
+        height: 6vw;
+        width: 6vw;
+    }
+}
